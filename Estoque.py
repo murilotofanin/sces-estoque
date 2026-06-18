@@ -1,5 +1,5 @@
 
-##Tive ajuda do Miguel para fazer esse codigo e tambem do Kauan e do Gustavo Dias
+##Tive ajuda do Miguel e do Gustavo Dias
 
 estoque = [
      [1,"Volante", 2, "Prateleira01"],
