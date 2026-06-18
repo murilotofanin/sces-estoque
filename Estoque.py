@@ -44,6 +44,14 @@ def BuscarID():
         else:
              print(f"O produto é {estoque[buscaproduto]}")
 
-        
+def atualizarEstoque():
+    idProduto = int(input("Qual o novo ID do produto?:"))
+    linhaProcurada = -1
+    for i in range(len(estoque)):
+        if(estoque[i][0] == idProduto):
+            linhaProcurada = i
+    print(f"O produto atualizado é {estoque[linhaProcurada]}")
+    quantidade = int(input("QUAL A QUANTIDADE DO PRODUTO?: "))
+    estoque[linhaProcurada][2] = quantidade
         
         
