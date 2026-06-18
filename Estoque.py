@@ -32,15 +32,18 @@ def listarprodutos():
       for i in estoque:
             print(i)
 
-
 def BuscarID():
         buscaproduto = int(input("Digite o ID do produto: "))
         posicaoProcurado = -1
+
         for i in range(len(estoque)):
             if(estoque[i][0] == buscaproduto):
                 posicaoProcurado = i
-        if(posicaoProcurado == -1):
-             print("Produto não encontrado!!☢️")
+        if (posicaoProcurado == -1):
+                print("Produto não encontrado!!☢️")
+        else:
+             print(f"O produto é {estoque[buscaproduto]}")
+
         
         
         
