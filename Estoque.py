@@ -53,5 +53,31 @@ def atualizarEstoque():
     print(f"O produto atualizado é {estoque[linhaProcurada]}")
     quantidade = int(input("QUAL A QUANTIDADE DO PRODUTO?: "))
     estoque[linhaProcurada][2] = quantidade
+
+
+
+while True:
+
+    print("\n----------MENU DO ESTOQUE---------")
+    print("1 - Adicionar Produto | 2-Lista de Produtos | 3-Buscar produtos por ID | 4- Atualizar estoque | 5-Sair"  )
+    opcao = input("Escolha uma opção abaixo: ")
+    if(opcao == "1"):
+        adicionarProdutos()
+
+    elif(opcao == "2"):
+        listarprodutos()
+
+
+    elif(opcao == "3"):
+        BuscarID()
+
+
+    elif(opcao == "4"):
+         atualizarEstoque()
+
+
+    elif(opcao == "5"):
+        print("Finalizando o Sistema!!")
+        break
         
         
