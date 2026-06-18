@@ -1,5 +1,5 @@
 
-##Tive ajuda do Miguel para fazer esse codigo e tambem do Kauan
+##Tive ajuda do Miguel para fazer esse codigo e tambem do Kauan e do Gustavo Dias
 
 estoque = [
      [1,"Volante", 2, "Prateleira01"],
@@ -7,6 +7,7 @@ estoque = [
      [3,"Ecapamento", 5, "Prateleira03"],
      [4,"Capô", 8, "Prateleira04"],
      ]
+
 
 
 proximoID = 5
@@ -25,7 +26,8 @@ def adicionarProdutos():
         proximoID = proximoID + 1
 
         print("Produto adicionado!👍👍")
-
+def travarmenu():
+     input("\nPrecisione p botão enter para continuar!!")
 
 def listarprodutos():
       print("Mostrando os produtos da lista!!")
@@ -54,12 +56,32 @@ def atualizarEstoque():
     quantidade = int(input("QUAL A QUANTIDADE DO PRODUTO?: "))
     estoque[linhaProcurada][2] = quantidade
 
+def excluirProdutos():
+     idProduto = int(input("Qual é o ID do produto que você deseja Excluir?:"))
+     linhaProcurada = -1
+     for i in range(len(estoque)):
+        if(estoque[i][0] == idProduto):
+          linhaProcurada = i
+          print(linhaProcurada)
+          if(linhaProcurada == -1):
+                print("Produto não encontrado!!☢️")
+        else:
+          Apagar=input("Você quer excluir esse produto? Sim/Não ").capitalize()
+          if (Apagar=="Sim"):
+                estoque.pop(linhaProcurada)
+                print("Produto excluido com sucesso 🗑️")
+          else:
+                print("Cancelado !!")
+                travarmenu()
+          
+
+     
 
 
 while True:
 
     print("\n----------MENU DO ESTOQUE---------")
-    print("1 - Adicionar Produto | 2-Lista de Produtos | 3-Buscar produtos por ID | 4- Atualizar estoque | 5-Sair"  )
+    print("1 - Adicionar Produto | 2-Lista de Produtos | 3-Buscar produtos por ID | 4- Atualizar estoque |5-Excluir Produtos | 6-Sair "  )
     opcao = input("Escolha uma opção abaixo: ")
     if(opcao == "1"):
         adicionarProdutos()
@@ -75,8 +97,10 @@ while True:
     elif(opcao == "4"):
          atualizarEstoque()
 
-
     elif(opcao == "5"):
+     excluirProdutos()
+     
+    elif(opcao == "6"):
         print("Finalizando o Sistema!!")
         break
         
